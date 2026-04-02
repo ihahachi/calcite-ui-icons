@@ -1,8 +1,8 @@
 # Calcite UI Icons for Laravel
 
-Blade component package for using Calcite UI Icons inside Laravel applications.
+Blade component package to easily use Calcite UI Icons in Laravel applications.
 
-This package provides a clean and simple way to use Calcite UI icons as Blade components.
+This package provides a clean and simple way to render Calcite UI Icons using Blade components with configurable defaults, publishable configuration, and test support.
 
 ---
 
@@ -14,52 +14,62 @@ Install the package via Composer:
 composer require ihahachi/calcite-ui-icons
 ```
 
-Laravel will automatically discover the service provider.
+Laravel automatically discovers the service provider.
 
 ---
 
 # 🚀 Usage
 
-You can use the icon component directly in your Blade views.
+Use the icon component directly in your Blade views.
 
 ```blade
-<x-calcite-icon icon="map" />
+<x-calcite-icon icon="layer" />
 ```
 
 With custom class:
 
 ```blade
-<x-calcite-icon icon="search" class="w-5 h-5" />
+<x-calcite-icon icon="search" class="w-6 h-6 text-gray-500" />
 ```
 
-With Tailwind styling:
+With scale:
 
 ```blade
-<x-calcite-icon icon="user" class="text-gray-500 w-6 h-6" />
+<x-calcite-icon icon="user" scale="l" />
+```
+
+Full example:
+
+```blade
+<div class="flex items-center gap-2">
+    <x-calcite-icon icon="user" class="w-5 h-5 text-blue-500" />
+    <span>User Section</span>
+</div>
 ```
 
 ---
 
 # 🎯 Icon Names
 
-To find available icon names, visit:
+All available icons come from the Calcite UI Icons library.
+
+Browse icons here:
 
 https://esri.github.io/calcite-ui-icons/
 
-Copy the icon name and use it inside the component.
+Copy the icon name and use it in the component.
 
 Example:
 
 ```
-map
 user
 search
+download
+upload
 layer
 plus
 minus
 trash
-download
-upload
 ```
 
 Usage:
@@ -70,88 +80,75 @@ Usage:
 
 ---
 
-# 🧩 Component Syntax
+# 🧩 Component Props
+
+| Prop  | Type   | Default      | Description                     |
+| ----- | ------ | ------------ | ------------------------------- |
+| icon  | string | required     | Icon name from Calcite UI Icons |
+| class | string | config value | CSS classes                     |
+| scale | string | m            | Icon scale (s, m, l)            |
+
+Example:
 
 ```blade
-<x-calcite-icon
-    icon="map"
-    class="w-5 h-5"
-/>
-```
-
-### Props
-
-| Prop  | Type   | Description                     |
-| ----- | ------ | ------------------------------- |
-| icon  | string | Icon name from Calcite UI Icons |
-| class | string | Optional CSS class              |
-
----
-
-# 🖼 Example
-
-```blade
-<div class="flex items-center gap-2">
-    <x-calcite-icon icon="map" class="w-5 h-5 text-blue-500" />
-    <span>Map</span>
-</div>
+<x-calcite-icon icon="download" class="w-6 h-6" scale="l" />
 ```
 
 ---
 
-# 📁 Package Structure
+# ⚙️ Configuration
 
-```
-calcite-ui-icons
-│
-├── src
-│   ├── Components
-│   │   └── Icon.php
-│   │
-│   ├── resources
-│   │   └── views
-│   │       └── icon.blade.php
-│   │
-│   └── CalciteIconsServiceProvider.php
-│
-├── composer.json
-├── README.md
-└── LICENSE
-```
-
----
-
-# ⚙️ Requirements
-
-- PHP 8.1+
-- Laravel 8.0 or higher
-
----
-
-# 🛠 Development
-
-Clone the repository:
+Publish the config file:
 
 ```bash
-git clone https://github.com/ihahachi/calcite-ui-icons.git
+php artisan vendor:publish --tag=calcite-icons-config
 ```
 
-Install dependencies:
+This will create:
 
-```bash
-composer install
+```
+config/calcite-icons.php
 ```
 
 ---
 
-# 📦 Publish New Version
+# 🛠 Config File
 
-```bash
-git tag v1.0.0
-git push origin v1.0.0
+```php
+return [
+
+    'class' => 'w-5 h-5',
+
+    'scale' => 'm',
+
+    'auto_load' => true,
+
+];
 ```
 
-Packagist will update automatically.
+### Available Options
+
+| Option    | Description                 |
+| --------- | --------------------------- |
+| class     | Default icon class          |
+| scale     | Default icon scale          |
+| auto_load | Auto load Calcite UI script |
+
+---
+
+# 🧪 Testing
+
+Run tests using PHPUnit.
+
+```bash
+vendor/bin/phpunit
+```
+
+or
+
+```bash
+composer test
+```
 
 ---
 
@@ -160,42 +157,45 @@ Packagist will update automatically.
 Contributions are welcome.
 
 1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
+2. Create a branch
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Create Pull Request
 
 ---
 
 # 📄 License
 
-This package is open-sourced software licensed under the MIT license.
+MIT License
 
 ---
 
 # ❤️ Credits
 
 - Calcite UI Icons
-- Laravel Blade Components
 
 ---
 
 # 🔗 Resources
 
-Calcite UI Icons source:
+Calcite UI Icons
 
 https://esri.github.io/calcite-ui-icons/
-
----
-
-# 🧠 Future Features
-
-- icon size property
-- icon color property
-- inline SVG support
-- Tailwind presets
-- Livewire integration
-- config publishing
-- caching icons
 
 ---
 
