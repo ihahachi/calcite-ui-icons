@@ -15,8 +15,13 @@
             "Calcite\\Icons\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Calcite\\Icons\\Tests\\": "tests/"
+        }
+    },
     "scripts": {
-        "test": "phpunit"
+        "test": "pest"
     },
     "extra": {
         "laravel": {
@@ -31,8 +36,13 @@
     },
     "require-dev": {
         "orchestra/testbench": "^9.0",
-        "phpunit/phpunit": "^10.0"
+        "pestphp/pest": "^3.0"
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }

@@ -1,27 +1,27 @@
 <?php
 
-namespace Calcite\Icons\Tests;
+uses(\Calcite\Icons\Tests\TestCase::class);
 
-class IconComponentTest extends TestCase
-{
-    /** @test */
-    public function icon_component_renders()
-    {
-        $view = $this->blade(
-            '<x-calcite-icon icon="user" />'
-        );
+it('renders icon component', function () {
+    $view = $this->blade(
+        '<x-calcite-icon icon="user" />'
+    );
 
-        $view->assertSee('calcite-icon');
-        $view->assertSee('user');
-    }
+    $view->assertSee('<svg', false);
+    $view->assertSee('user');
+});
 
-    /** @test */
-    public function default_config_is_applied()
-    {
-        $view = $this->blade(
-            '<x-calcite-icon icon="user" />'
-        );
+it('applies default config', function () {
+    $view = $this->blade(
+        '<x-calcite-icon icon="user" />'
+    );
 
-        $view->assertSee('w-5 h-5');
-    }
-}
+    $view->assertSee('w-5 h-5');
+});
+
+it('throws exception for invalid icon', function () {
+    $this->expectException(\Illuminate\View\ViewException::class);
+    $this->expectExceptionMessage("Calcite icon 'this-is-not-an-icon' not found.");
+
+    $this->blade('<x-calcite-icon icon="this-is-not-an-icon" />');
+});
