@@ -24,6 +24,13 @@ class Icon extends Component
 
     public function render(): View|Closure|string
     {
+        if (! view()->exists("calcite-icons::icons.{$this->icon}")) {
+            if (app()->environment('local', 'testing')) {
+                throw new \InvalidArgumentException("Calcite icon '{$this->icon}' not found.");
+            }
+            return '';
+        }
+
         return view('calcite-icons::icon');
     }
 }

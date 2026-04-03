@@ -138,10 +138,10 @@ return [
 
 # 🧪 Testing
 
-Run tests using PHPUnit.
+Run tests using Pest.
 
 ```bash
-vendor/bin/phpunit
+vendor/bin/pest
 ```
 
 or
