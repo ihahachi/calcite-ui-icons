@@ -1,2 +1,1 @@
-<path
-                d="M29 7H11V6h18zm0 9H11v1h18zm0 10H11v1h18zM8 9H3V4h5zM7 5H4v3h3zm1 14H3v-5h5zm-1-4H4v3h3zm1 14H3v-5h5zm-1-4H4v3h3z" />
+<path d="M6 3v18l5-7h9zm4.485 10L7 17.88V5.058L17.108 13z" fill-rule="evenodd"/><path fill="none" d="M0 0h24v24H0z"/>

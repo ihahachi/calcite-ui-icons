@@ -1,1 +1,1 @@
-<path d="M4 3h5v1H5v17h4v1H4V3zm11 0v1h4v17h-4v1h5V3h-5z" stroke-width="0" />
+<path stroke-width="0" fill="none" d="M0 0h24v24H0z"/><path d="M4 3h5v1H5v17h4v1H4V3zm11 0v1h4v17h-4v1h5V3h-5z" stroke-width="0"/>

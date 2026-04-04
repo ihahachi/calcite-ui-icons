@@ -1,1 +1,1 @@
-<path d="M8 22H7V2h1v20zM18.207 5h-1.414l-7 7 7 7h1.414l-7-7 7-7z" />
+<path d="M8 22H7V2h1v20zM18.207 5h-1.414l-7 7 7 7h1.414l-7-7 7-7z"/><path fill="none" d="M0 0h24v24H0z"/>

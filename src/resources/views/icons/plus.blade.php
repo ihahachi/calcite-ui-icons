@@ -1,1 +1,1 @@
-<path d="M6 12h6V6h1v6h6v1h-6v6h-1v-6H6z" />
+<path d="M6 12h6V6h1v6h6v1h-6v6h-1v-6H6z"/><path fill="none" d="M0 0h24v24H0z"/>

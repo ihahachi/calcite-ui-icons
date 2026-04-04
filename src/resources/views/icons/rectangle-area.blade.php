@@ -1,0 +1,1 @@
+<path d="M1 3v18h22V3zm21 17H2V4h20z"/><path opacity=".25" d="M2 4h20v16H2z"/><path fill="none" d="M0 0h24v24H0z"/>

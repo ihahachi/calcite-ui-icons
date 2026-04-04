@@ -1,0 +1,1 @@
+<path d="M3 1.773l15 10.23L3 22.226zM20 22h1V2h-1z"/><path fill="none" d="M0 0h24v24H0z"/>
