@@ -1,4 +1,8 @@
 # Calcite UI Icons for Laravel
+![Calcite Design System Icons](https://github.com/user-attachments/assets/60fa5660-fc61-406b-b102-62a6c9b19ca7)
+
+
+
 
 Blade component package to easily use Calcite UI Icons in Laravel applications.
 
