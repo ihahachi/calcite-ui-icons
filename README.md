@@ -36,12 +36,6 @@ With custom class:
 <x-calcite-icon icon="search" class="w-6 h-6 text-gray-500" />
 ```
 
-With scale:
-
-```blade
-<x-calcite-icon icon="user" scale="l" />
-```
-
 Full example:
 
 ```blade
@@ -90,12 +84,11 @@ Usage:
 | ----- | ------ | ------------ | ------------------------------- |
 | icon  | string | required     | Icon name from Calcite UI Icons |
 | class | string | config value | CSS classes                     |
-| scale | string | m            | Icon scale (s, m, l)            |
 
 Example:
 
 ```blade
-<x-calcite-icon icon="download" class="w-6 h-6" scale="l" />
+<x-calcite-icon icon="download" class="w-6 h-6" />
 ```
 
 ---
@@ -123,8 +116,6 @@ return [
 
     'class' => 'w-5 h-5',
 
-    'scale' => 'm',
-
     'auto_load' => true,
 
 ];
@@ -135,7 +126,6 @@ return [
 | Option    | Description                 |
 | --------- | --------------------------- |
 | class     | Default icon class          |
-| scale     | Default icon scale          |
 | auto_load | Auto load Calcite UI script |
 
 ---
